@@ -11,14 +11,16 @@
 /* ************************************************************************** */
 #include <unistd.h>
 
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
 void	ft_print_alphabet(void)
 {
 	char	my_character;
 
 	my_character = 'a';
-	while (my_character <= 122)
-	{
-		write(1, &my_character, 1);
-		my_character += 1;
-	}
+	while (my_character <= 'z')
+		ft_putchar(my_character++);
 }
